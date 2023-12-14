@@ -835,7 +835,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     remove: function () {
       return this.each(function (v) {
-        if (!!v.parentNode) {
+        if (v.parentNode) {
           return v.parentNode.removeChild(v);
         }
       });
@@ -1021,7 +1021,7 @@ var Component = function () {
 
     // If exists, destroy and reinitialize in child
     var ins = classDef.getInstance(el);
-    if (!!ins) {
+    if (ins) {
       ins.destroy();
     }
 
@@ -1165,7 +1165,7 @@ M.initializeJqueryWrapper = function (plugin, pluginName, classRef) {
  */
 M.AutoInit = function (context) {
   // Use document.body if no context is given
-  var root = !!context ? context : document.body;
+  var root = context ? context : document.body;
 
   var registry = {
     Autocomplete: root.querySelectorAll('.autocomplete:not(.no-autoinit)'),
@@ -2191,7 +2191,7 @@ $jscomp.polyfill = function (e, r, p, m) {
     }, {
       key: "getInstance",
       value: function getInstance(el) {
-        var domElem = !!el.jquery ? el[0] : el;
+        var domElem = el.jquery ? el[0] : el;
         return domElem.M_Collapsible;
       }
     }, {
@@ -2290,7 +2290,7 @@ $jscomp.polyfill = function (e, r, p, m) {
       _this9.filterQuery = [];
 
       // Move dropdown-content after dropdown-trigger
-      if (!!_this9.options.container) {
+      if (_this9.options.container) {
         $(_this9.options.container).append(_this9.dropdownEl);
       } else {
         _this9.$el.after(_this9.dropdownEl);
@@ -2509,9 +2509,9 @@ $jscomp.polyfill = function (e, r, p, m) {
           var $activatableElement = $(focusedElement).find('a, button').first();
 
           // Click a or button tag if exists, otherwise click li tag
-          if (!!$activatableElement.length) {
+          if ($activatableElement.length) {
             $activatableElement[0].click();
-          } else if (!!focusedElement) {
+          } else if (focusedElement) {
             focusedElement.click();
           }
 
@@ -2604,7 +2604,7 @@ $jscomp.polyfill = function (e, r, p, m) {
         };
 
         // Countainer here will be closest ancestor with overflow: hidden
-        var closestOverflowParent = !!this.dropdownEl.offsetParent ? this.dropdownEl.offsetParent : this.dropdownEl.parentNode;
+        var closestOverflowParent = this.dropdownEl.offsetParent ? this.dropdownEl.offsetParent : this.dropdownEl.parentNode;
 
         var alignments = M.checkPossibleAlignments(this.el, closestOverflowParent, dropdownBounds, this.options.coverTrigger ? 0 : triggerBRect.height);
 
@@ -2832,7 +2832,7 @@ $jscomp.polyfill = function (e, r, p, m) {
     }, {
       key: "getInstance",
       value: function getInstance(el) {
-        var domElem = !!el.jquery ? el[0] : el;
+        var domElem = el.jquery ? el[0] : el;
         return domElem.M_Dropdown;
       }
     }, {
@@ -3184,7 +3184,7 @@ $jscomp.polyfill = function (e, r, p, m) {
         this.el.style.zIndex = 1000 + Modal._modalsOpen * 2 + 1;
 
         // Set opening trigger, undefined indicates modal was opened by javascript
-        this._openingTrigger = !!$trigger ? $trigger[0] : undefined;
+        this._openingTrigger = $trigger ? $trigger[0] : undefined;
 
         // onOpenStart callback
         if (typeof this.options.onOpenStart === 'function') {
@@ -3265,7 +3265,7 @@ $jscomp.polyfill = function (e, r, p, m) {
     }, {
       key: "getInstance",
       value: function getInstance(el) {
-        var domElem = !!el.jquery ? el[0] : el;
+        var domElem = el.jquery ? el[0] : el;
         return domElem.M_Modal;
       }
     }, {
@@ -3782,7 +3782,7 @@ $jscomp.polyfill = function (e, r, p, m) {
     }, {
       key: "getInstance",
       value: function getInstance(el) {
-        var domElem = !!el.jquery ? el[0] : el;
+        var domElem = el.jquery ? el[0] : el;
         return domElem.M_Materialbox;
       }
     }, {
@@ -3921,7 +3921,7 @@ $jscomp.polyfill = function (e, r, p, m) {
     }, {
       key: "getInstance",
       value: function getInstance(el) {
-        var domElem = !!el.jquery ? el[0] : el;
+        var domElem = el.jquery ? el[0] : el;
         return domElem.M_Parallax;
       }
     }, {
@@ -4109,7 +4109,7 @@ $jscomp.polyfill = function (e, r, p, m) {
         }
 
         // Act as regular link if target attribute is specified.
-        if (!!tabLink.attr('target')) {
+        if (tabLink.attr('target')) {
           return;
         }
 
@@ -4284,7 +4284,7 @@ $jscomp.polyfill = function (e, r, p, m) {
       value: function _setupNormalTabs() {
         // Hide Tabs Content
         this.$tabLinks.not(this.$activeTabLink).each(function (link) {
-          if (!!link.hash) {
+          if (link.hash) {
             var $currContent = $(M.escapeHash(link.hash));
             if ($currContent.length) {
               $currContent[0].style.display = 'none';
@@ -4302,7 +4302,7 @@ $jscomp.polyfill = function (e, r, p, m) {
       value: function _teardownNormalTabs() {
         // show Tabs Content
         this.$tabLinks.each(function (link) {
-          if (!!link.hash) {
+          if (link.hash) {
             var $currContent = $(M.escapeHash(link.hash));
             if ($currContent.length) {
               $currContent[0].style.display = '';
@@ -4411,7 +4411,7 @@ $jscomp.polyfill = function (e, r, p, m) {
     }, {
       key: "getInstance",
       value: function getInstance(el) {
-        var domElem = !!el.jquery ? el[0] : el;
+        var domElem = el.jquery ? el[0] : el;
         return domElem.M_Tabs;
       }
     }, {
@@ -4752,7 +4752,7 @@ $jscomp.polyfill = function (e, r, p, m) {
     }, {
       key: "getInstance",
       value: function getInstance(el) {
-        var domElem = !!el.jquery ? el[0] : el;
+        var domElem = el.jquery ? el[0] : el;
         return domElem.M_Tooltip;
       }
     }, {
@@ -5165,7 +5165,7 @@ $jscomp.polyfill = function (e, r, p, m) {
         toast.classList.add('toast');
 
         // Add custom classes onto toast
-        if (!!this.options.classes.length) {
+        if (this.options.classes.length) {
           $(toast).addClass(this.options.classes);
         }
 
@@ -5174,7 +5174,7 @@ $jscomp.polyfill = function (e, r, p, m) {
           toast.appendChild(this.message);
 
           // Check if it is jQuery object
-        } else if (!!this.message.jquery) {
+        } else if (this.message.jquery) {
           $(toast).append(this.message[0]);
 
           // Insert as html;
@@ -5275,7 +5275,7 @@ $jscomp.polyfill = function (e, r, p, m) {
        * Get Instance
        */
       value: function getInstance(el) {
-        var domElem = !!el.jquery ? el[0] : el;
+        var domElem = el.jquery ? el[0] : el;
         return domElem.M_Toast;
       }
 
@@ -5346,7 +5346,7 @@ $jscomp.polyfill = function (e, r, p, m) {
     }, {
       key: "_onDragMove",
       value: function _onDragMove(e) {
-        if (!!Toast._draggedToast) {
+        if (Toast._draggedToast) {
           e.preventDefault();
           var toast = Toast._draggedToast;
           toast.deltaX = Math.abs(toast.xPos - Toast._xPos(e));
@@ -5368,7 +5368,7 @@ $jscomp.polyfill = function (e, r, p, m) {
     }, {
       key: "_onDragEnd",
       value: function _onDragEnd() {
-        if (!!Toast._draggedToast) {
+        if (Toast._draggedToast) {
           var toast = Toast._draggedToast;
           toast.panning = false;
           toast.el.classList.remove('panning');
@@ -6072,7 +6072,7 @@ $jscomp.polyfill = function (e, r, p, m) {
     }, {
       key: "getInstance",
       value: function getInstance(el) {
-        var domElem = !!el.jquery ? el[0] : el;
+        var domElem = el.jquery ? el[0] : el;
         return domElem.M_Sidenav;
       }
     }, {
@@ -6335,7 +6335,7 @@ $jscomp.polyfill = function (e, r, p, m) {
     }, {
       key: "getInstance",
       value: function getInstance(el) {
-        var domElem = !!el.jquery ? el[0] : el;
+        var domElem = el.jquery ? el[0] : el;
         return domElem.M_ScrollSpy;
       }
     }, {
@@ -6811,7 +6811,7 @@ $jscomp.polyfill = function (e, r, p, m) {
         for (var i = 0; i < matchingData.length; i++) {
           var _entry = matchingData[i];
           var $autocompleteOption = $('<li></li>');
-          if (!!_entry.data) {
+          if (_entry.data) {
             $autocompleteOption.append("<img src=\"" + _entry.data + "\" class=\"right circle\"><span>" + _entry.key + "</span>");
           } else {
             $autocompleteOption.append('<span>' + _entry.key + '</span>');
@@ -6885,7 +6885,7 @@ $jscomp.polyfill = function (e, r, p, m) {
     }, {
       key: "getInstance",
       value: function getInstance(el) {
-        var domElem = !!el.jquery ? el[0] : el;
+        var domElem = el.jquery ? el[0] : el;
         return domElem.M_Autocomplete;
       }
     }, {
@@ -7551,7 +7551,7 @@ $jscomp.polyfill = function (e, r, p, m) {
     }, {
       key: "getInstance",
       value: function getInstance(el) {
-        var domElem = !!el.jquery ? el[0] : el;
+        var domElem = el.jquery ? el[0] : el;
         return domElem.M_Slider;
       }
     }, {
@@ -8037,7 +8037,7 @@ $jscomp.polyfill = function (e, r, p, m) {
     }, {
       key: "getInstance",
       value: function getInstance(el) {
-        var domElem = !!el.jquery ? el[0] : el;
+        var domElem = el.jquery ? el[0] : el;
         return domElem.M_Chips;
       }
     }, {
@@ -8289,7 +8289,7 @@ $jscomp.polyfill = function (e, r, p, m) {
     }, {
       key: "getInstance",
       value: function getInstance(el) {
-        var domElem = !!el.jquery ? el[0] : el;
+        var domElem = el.jquery ? el[0] : el;
         return domElem.M_Pushpin;
       }
     }, {
@@ -8704,7 +8704,7 @@ $jscomp.polyfill = function (e, r, p, m) {
     }, {
       key: "getInstance",
       value: function getInstance(el) {
-        var domElem = !!el.jquery ? el[0] : el;
+        var domElem = el.jquery ? el[0] : el;
         return domElem.M_FloatingActionButton;
       }
     }, {
@@ -9627,7 +9627,7 @@ $jscomp.polyfill = function (e, r, p, m) {
     }, {
       key: "getInstance",
       value: function getInstance(el) {
-        var domElem = !!el.jquery ? el[0] : el;
+        var domElem = el.jquery ? el[0] : el;
         return domElem.M_Datepicker;
       }
     }, {
@@ -10264,7 +10264,7 @@ $jscomp.polyfill = function (e, r, p, m) {
     }, {
       key: "getInstance",
       value: function getInstance(el) {
-        var domElem = !!el.jquery ? el[0] : el;
+        var domElem = el.jquery ? el[0] : el;
         return domElem.M_Timepicker;
       }
     }, {
@@ -10436,7 +10436,7 @@ $jscomp.polyfill = function (e, r, p, m) {
     }, {
       key: "getInstance",
       value: function getInstance(el) {
-        var domElem = !!el.jquery ? el[0] : el;
+        var domElem = el.jquery ? el[0] : el;
         return domElem.M_CharacterCounter;
       }
     }, {
@@ -11223,7 +11223,7 @@ $jscomp.polyfill = function (e, r, p, m) {
     }, {
       key: "getInstance",
       value: function getInstance(el) {
-        var domElem = !!el.jquery ? el[0] : el;
+        var domElem = el.jquery ? el[0] : el;
         return domElem.M_Carousel;
       }
     }, {
@@ -11577,7 +11577,7 @@ $jscomp.polyfill = function (e, r, p, m) {
     }, {
       key: "getInstance",
       value: function getInstance(el) {
-        var domElem = !!el.jquery ? el[0] : el;
+        var domElem = el.jquery ? el[0] : el;
         return domElem.M_TapTarget;
       }
     }, {
@@ -11920,7 +11920,7 @@ $jscomp.polyfill = function (e, r, p, m) {
 
         // add icons
         var iconUrl = option.getAttribute('data-icon');
-        if (!!iconUrl) {
+        if (iconUrl) {
           var imgEl = $("<img alt=\"\" src=\"" + iconUrl + "\">");
           liEl.prepend(imgEl);
         }
@@ -12053,7 +12053,7 @@ $jscomp.polyfill = function (e, r, p, m) {
     }, {
       key: "getInstance",
       value: function getInstance(el) {
-        var domElem = !!el.jquery ? el[0] : el;
+        var domElem = el.jquery ? el[0] : el;
         return domElem.M_FormSelect;
       }
     }, {
@@ -12351,7 +12351,7 @@ $jscomp.polyfill = function (e, r, p, m) {
     }, {
       key: "getInstance",
       value: function getInstance(el) {
-        var domElem = !!el.jquery ? el[0] : el;
+        var domElem = el.jquery ? el[0] : el;
         return domElem.M_Range;
       }
     }, {
