@@ -35,8 +35,8 @@ export default {
     }
   },
   methods: {
-    changeCheckbox(){
-      this.checboxOne = !this.checboxOne;
+    changeCheckbox() {
+      this.checboxOne = !this.checboxOne
     }
   },
   beforeCreate() {

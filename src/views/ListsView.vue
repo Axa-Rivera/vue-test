@@ -32,9 +32,9 @@
                 <td>{{ obj.Brand }}</td>
                 <td>{{ obj.Model }}</td>
                 <td>
-                  <a class="waves-effect waves-light btn" @click="fnBuy(obj)"
-                    ><i class="material-icons">shopping_cart</i></a
-                  >
+                  <a class="waves-effect waves-light btn" @click="fnBuy(obj)">
+                    <i class="material-icons">shopping_cart</i>
+                  </a>
                 </td>
               </tr>
             </tbody>
@@ -60,16 +60,16 @@ export default {
   data() {
     return {
       numbersArray: [
-        { icon: 'settings_bluetooth', number: 1},
-        { icon: 'settings_brightness', number: 2},
-        { icon: 'settings_cell', number: 3},
-        { icon: 'settings_ethernet', number: 4},
-        { icon: 'settings_input_antenna', number: 5},
-        { icon: 'settings_input_component', number: 6},
-        { icon: 'settings_input_hdmi', number: 7},
-        { icon: 'settings_input_svideo', number: 8},
-        { icon: 'settings_overscan', number: 9},
-        { icon: 'settings_phone', number: 0}
+        { icon: 'settings_bluetooth', number: 1 },
+        { icon: 'settings_brightness', number: 2 },
+        { icon: 'settings_cell', number: 3 },
+        { icon: 'settings_ethernet', number: 4 },
+        { icon: 'settings_input_antenna', number: 5 },
+        { icon: 'settings_input_component', number: 6 },
+        { icon: 'settings_input_hdmi', number: 7 },
+        { icon: 'settings_input_svideo', number: 8 },
+        { icon: 'settings_overscan', number: 9 },
+        { icon: 'settings_phone', number: 0 }
       ],
       objectsArray: [
         { Id: 0, Brand: 'Chevrolet', Model: 'Aveo' },
