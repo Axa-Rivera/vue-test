@@ -8,8 +8,8 @@
       <label @click.once="fnLog">Click me</label>
     </button>
     <p>
-        <label @copy="fnCopy">Ingrese su nombre: </label>
-        <input type="text" @keyup.enter="fnEnter" v-model="username">
+      <label @copy="fnCopy">Ingrese su nombre: </label>
+      <input type="text" @keyup.enter="fnEnter" v-model="username" />
     </p>
     <button type="button" @dblclick="fnDbClick($event, 'Hi')">Button with parameters</button>
   </div>
@@ -30,16 +30,15 @@ export default {
     fnLog() {
       console.log('Evento dentro de div')
     },
-    fnEnter(){
-        if(this.username)
-            alert("Hola mundo " + this.username);
+    fnEnter() {
+      if (this.username) alert('Hola mundo ' + this.username)
     },
-    fnCopy(){
-        alert("Texto copiado");
+    fnCopy() {
+      alert('Texto copiado')
     },
-    fnDbClick(event, value){
-        console.log("Value: " + value);
-        console.log("Event: ", event);
+    fnDbClick(event, value) {
+      console.log('Value: ' + value)
+      console.log('Event: ', event)
     }
   }
 }

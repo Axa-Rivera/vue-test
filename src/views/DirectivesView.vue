@@ -51,9 +51,7 @@
       </div>
       <div class="row">
         <div class="col s12">
-          <a :href="'https://' + linkReference" target="_blank">{{
-            linkReference
-          }}</a>
+          <a :href="'https://' + linkReference" target="_blank">{{ linkReference }}</a>
         </div>
       </div>
     </div>

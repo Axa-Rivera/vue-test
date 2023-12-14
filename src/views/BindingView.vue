@@ -13,7 +13,7 @@
         <h3>Two way binding</h3>
         <div class="input-field col s3">
           <input type="text" id="last_name" class="validate" v-model="message" />
-          <label for="last_name" :class="{'active': message}">Last Name</label>
+          <label for="last_name" :class="{ active: message }">Last Name</label>
         </div>
       </div>
     </div>
