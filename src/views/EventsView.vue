@@ -1,17 +1,27 @@
 <template>
-  <div class="wrapper">
-    <p>Count: {{ count }}</p>
-    <p>
-      <button type="button" v-on:click="fnCount">Count</button>
-    </p>
-    <button>
-      <label @click.once="fnLog">Click me</label>
-    </button>
-    <p>
+  <div class="row">
+    <div class="col s12">
+      <p>Count: {{ count }}</p>
+      <p>
+        <a class="waves-effect waves-light btn" @click="fnCount">Count</a>
+      </p>
+      <a class="waves-effect waves-light btn" @click.once="fnLog">Click me </a>
+
       <label @copy="fnCopy">Ingrese su nombre: </label>
-      <input type="text" @keyup.enter="fnEnter" v-model="username" />
-    </p>
-    <button type="button" @dblclick="fnDbClick($event, 'Hi')">Button with parameters</button>
+      <div class="input-field col s6">
+        <input
+          id="username"
+          type="text"
+          class="validate"
+          v-model="username"
+          @keyup.enter="fnEnter"
+        />
+        <label for="username">User Name:</label>
+      </div>
+      <a class="waves-effect waves-light btn" @dblclick="fnDbClick($event, 'Hi')"
+        >Button with parameters</a
+      >
+    </div>
   </div>
 </template>
 

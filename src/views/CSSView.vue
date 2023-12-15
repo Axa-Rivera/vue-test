@@ -1,19 +1,21 @@
 <template>
-  <div class="wrapper">
-    <h2>Simple Conditional CSS</h2>
-    <div :class="{ alert: flag }">Some Text</div>
+  <div class="row">
+    <div class="col s12">
+      <h2>Simple Conditional CSS</h2>
+      <div :class="{ alert: flag }">Some Text</div>
 
-    <h2>Two Way Conditional CSS</h2>
-    <div :class="[hasError ? 'alert' : 'success']">Some Text</div>
+      <h2>Two Way Conditional CSS</h2>
+      <div :class="[hasError ? 'alert' : 'success']">Some Text</div>
 
-    <h2>Object CSS</h2>
-    <div :class="classObject">Some Text</div>
+      <h2>Object CSS</h2>
+      <div :class="classObject">Some Text</div>
 
-    <h2>Styles</h2>
-    <div :style="{ fontSize: fontSize + 'px', color: fontColor }">Some Text</div>
-    <button type="button" @click="changeFont">
-      {{ flagFont ? 'Change Font' : 'Revert Font' }}
-    </button>
+      <h2>Styles</h2>
+      <div :style="{ fontSize: fontSize + 'px', color: fontColor }">Some Text</div>
+      <a class="waves-effect waves-light btn" @click="changeFont">
+        {{ flagFont ? 'Change Font' : 'Revert Font' }}</a
+      >
+    </div>
   </div>
 </template>
 
@@ -24,7 +26,7 @@ export default {
       flag: true,
       hasError: true,
       fontSize: 15,
-      fontColor: 'white',
+      fontColor: 'blue',
       flagFont: true,
       classObject: {
         success: true,
@@ -39,7 +41,7 @@ export default {
         this.fontColor = 'blueviolet'
       } else {
         this.fontSize = 15
-        this.fontColor = 'white'
+        this.fontColor = 'blue'
       }
       this.flagFont = !this.flagFont
     }
