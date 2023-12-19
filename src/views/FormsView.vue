@@ -3,13 +3,12 @@
     <div class="row">
       <h2>Form with submit</h2>
       <form class="col s12">
-        <div class="row">
+        <div class="row flex-row flex-wrap">
           <div class="input-field col s12 m6 l4">
             <input id="model" type="text" class="validate" required="" aria-required="true" />
             <label for="model">Model</label>
             <span class="helper-text" data-error="Model is required"></span>
           </div>
-
           <div class="input-field col s12 m6 l4">
             <select v-model="car.brand" id="brand">
               <option value="" disabled selected>Choose your Brand:</option>
@@ -20,9 +19,7 @@
             </select>
             <label>Brand</label>
           </div>
-          <!-- </div>
-        <div class="row"> -->
-          <div class="input-field col s12 m6 l4">
+          <div class="input-field col s12 m6 l4 pull-m6">
             <textarea
               id="notes"
               class="materialize-textarea"
