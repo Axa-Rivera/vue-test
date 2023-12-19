@@ -1,54 +1,45 @@
 <template>
-  <div class="wrapper">
-    <h2>Form with submit</h2>
-    <form @submit.prevent="sendData">
-      <p>
-        <label>Model: </label>
-        <input type="text" name="model" id="model" v-model="car.model" />
-      </p>
-      <p>
-        <label v-if="!car.model" class="messageError">Model is required</label>
-      </p>
-      <p>
-        <label>Brand: </label>
-        <select name="brand" id="brand" v-model="car.brand">
-          <option value="Chevrolet">Chevrolet</option>
-          <option value="Volkswagen">Volkswagen</option>
-          <option value="Honda">Honda</option>
-          <option value="Jeep">Jeep</option>
-        </select>
-      </p>
-      <p>
-        <label>Notes: </label>
-        <textarea name="notes" id="notes" cols="15" rows="5" v-model="car.notes"></textarea>
-      </p>
-      <button type="submit">Send</button>
-    </form>
+  <div class="container">
+    <div class="row">
+      <h2>Form with submit</h2>
+      <form class="col s12">
+        <div class="row">
+          <div class="input-field col s12 m6 l4">
+            <input id="model" type="text" class="validate" required="" aria-required="true" />
+            <label for="model">Model</label>
+            <span class="helper-text" data-error="Model is required"></span>
+          </div>
 
-    <h2>Form with button action</h2>
-    <form>
-      <p>
-        <label>Model: </label>
-        <input type="text" name="model" id="model" v-model="car.model" />
-      </p>
-      <p>
-        <label v-if="!car.model" class="messageError">Model is required</label>
-      </p>
-      <p>
-        <label>Brand: </label>
-        <select name="brand" id="brand" v-model="car.brand">
-          <option value="Chevrolet">Chevrolet</option>
-          <option value="Volkswagen">Volkswagen</option>
-          <option value="Honda">Honda</option>
-          <option value="Jeep">Jeep</option>
-        </select>
-      </p>
-      <p>
-        <label>Notes: </label>
-        <textarea name="notes" id="notes" cols="15" rows="5" v-model="car.notes"></textarea>
-      </p>
-      <button type="button" @click="sendData">Send</button>
-    </form>
+          <div class="input-field col s12 m6 l4">
+            <select v-model="car.brand" id="brand">
+              <option value="" disabled selected>Choose your Brand:</option>
+              <option value="Chevrolet">Chevrolet</option>
+              <option value="Volkswagen">Volkswagen</option>
+              <option value="Honda">Honda</option>
+              <option value="Jeep">Jeep</option>
+            </select>
+            <label>Brand</label>
+          </div>
+          <!-- </div>
+        <div class="row"> -->
+          <div class="input-field col s12 m6 l4">
+            <textarea
+              id="notes"
+              class="materialize-textarea"
+              cols="15"
+              rows="5"
+              v-model="car.notes"
+            ></textarea>
+            <label for="notes">Notes:</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s12 m6">
+            <a class="waves-effect waves-light btn" @click="sendData">Send</a>
+          </div>
+        </div>
+      </form>
+    </div>
   </div>
 </template>
 
