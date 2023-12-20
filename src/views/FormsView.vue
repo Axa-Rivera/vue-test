@@ -5,7 +5,14 @@
       <form class="col s12">
         <div class="row flex-row flex-wrap">
           <div class="input-field col s12 m6 l4">
-            <input id="model" type="text" class="validate" required="" aria-required="true" />
+            <input
+              id="model"
+              type="text"
+              class="validate"
+              required=""
+              aria-required="true"
+              v-model="car.model"
+            />
             <label for="model">Model</label>
             <span class="helper-text" data-error="Model is required"></span>
           </div>

@@ -1,20 +1,35 @@
 <template>
-  <div class="wrapper">
-    <label>Fecha computada1 = {{ randomNumberComputed }}</label>
-    <label>Fecha computada2 = {{ randomNumberComputed }}</label>
-    <label>Fecha metodo1 = {{ randomNumber() }}</label>
-    <label>Fecha metodo2 = {{ randomNumber() }}</label>
-
-    <br />
-    <label>Edad: {{ edadComputed }}</label>
-
-    <br />
-    <button type="button" @click="getDate">Get date</button>
-    <button type="button" @click="changeComputedDate">Change computed date</button>
-
-    <br />
-    <button type="button" @click="getEdad">Get edad</button>
-    <button type="button" @click="changeFechaNacimiento">Change fecha nacimiento</button>
+  <div class="container">
+    <div class="row">
+      <div class="col s12">
+        <label>Fecha computada1 = {{ randomNumberComputed }}</label>
+        <label>Fecha computada2 = {{ randomNumberComputed }}</label>
+        <label>Fecha metodo1 = {{ randomNumber() }}</label>
+        <label>Fecha metodo2 = {{ randomNumber() }}</label>
+        <div class="row">
+          <div class="col s12">
+            <label>Edad: {{ edadComputed }}</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s12">
+            <a class="waves-effect waves-light btn col s4" @click="getDate">Get date</a>
+            &nbsp;
+            <a class="waves-effect waves-light btn col s4" @click="changeComputedDate"
+              >Change computed date</a
+            >
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s12">
+            <a class="waves-effect waves-light btn" @click="getEdad">Get edad</a>
+            <a class="waves-effect waves-light btn" @click="changeFechaNacimiento"
+              >Change fecha nacimiento</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
