@@ -17,7 +17,7 @@
             <span class="helper-text" data-error="Model is required"></span>
           </div>
           <div class="input-field col s12 m6 l4">
-            <select v-model="car.brand" id="brand">
+            <select v-model="car.brand" id="brand" name="brand" title="brand">
               <option value="" disabled selected>Choose your Brand:</option>
               <option value="Chevrolet">Chevrolet</option>
               <option value="Volkswagen">Volkswagen</option>
@@ -57,6 +57,11 @@ export default {
         notes: ''
       }
     }
+  },
+  mounted() {
+    var elements = document.querySelectorAll('select')
+    // eslint-disable-next-line no-undef
+    M.FormSelect.init(elements)
   },
   methods: {
     sendData() {

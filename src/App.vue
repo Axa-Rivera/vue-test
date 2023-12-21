@@ -1,7 +1,3 @@
-<script setup>
-import { RouterLink, RouterView } from 'vue-router'
-</script>
-
 <template>
   <header>
     <div class="wrapper">
@@ -14,7 +10,6 @@ import { RouterLink, RouterView } from 'vue-router'
             <li>
               <RouterLink :to="{ name: 'bindingView' }">Binding</RouterLink>
             </li>
-
             <li>
               <RouterLink :to="{ name: 'lifeCycleView' }">LifeCycle</RouterLink>
             </li>
@@ -47,5 +42,9 @@ import { RouterLink, RouterView } from 'vue-router'
 
   <RouterView />
 </template>
+
+<script setup>
+import { RouterLink, RouterView } from 'vue-router'
+</script>
 
 <style scoped></style>
