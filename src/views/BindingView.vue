@@ -17,14 +17,41 @@
         </div>
       </div>
     </div>
+    <!-- Registro global -->
+    <card-component
+      v-for="item in [1, 2, 3]"
+      :key="item"
+      :prop-one="'Property - ' + item"
+      @eventOne="emitEventOne"
+    />
+    <card-component :prop-two="true">
+      <template #[slotName]>
+        <a class="waves-effect waves-light btn">Slot Test</a>
+      </template>
+      <p><i class="material-icons">add</i> Agregar</p>
+      <p><i class="material-icons">accessible</i> Accessible</p>
+    </card-component>
+    <!-- Registro Local -->
+    <FooterComponent />
   </div>
 </template>
 
 <script>
+import FooterComponent from '../components/footer.vue'
+
 export default {
   data() {
     return {
+      slotName: 'test',
       message: 'Hola Mundo'
+    }
+  },
+  components: {
+    FooterComponent
+  },
+  methods: {
+    emitEventOne(prop) {
+      alert('Event emited from ' + prop)
     }
   }
 }

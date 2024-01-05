@@ -8,6 +8,8 @@ import ComputedPropertiesView from '../views/ComputedPropertiesView.vue'
 import EventsView from '../views/EventsView.vue'
 import CSSView from '../views/CSSView.vue'
 import FormsView from '../views/FormsView.vue'
+import WatchersView from '../views/WatchersView.vue'
+import FiltersView from '../views/FiltersView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -56,6 +58,16 @@ const router = createRouter({
       path: '/forms',
       name: 'formsView',
       component: FormsView
+    },
+    {
+      path: '/watchers',
+      name: 'watchersView',
+      component: WatchersView
+    },
+    {
+      path: '/filters',
+      name: 'filtersView',
+      component: FiltersView
     },
     {
       path: '/:pathMatch(.*)*',

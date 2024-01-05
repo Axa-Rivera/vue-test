@@ -1,35 +1,33 @@
 <template>
-  <div class="container">
-    <div class="row">
-      <div class="col s12">
-        <div class="row">
-          <div class="col s12">
-            <p>Fecha computada1 = {{ randomNumberComputed }}</p>
-            <p>Fecha computada2 = {{ randomNumberComputed }}</p>
-            <p>Fecha metodo1 = {{ randomNumber() }}</p>
-            <p>Fecha metodo2 = {{ randomNumber() }}</p>
-            <p>Edad: {{ edadComputed }}</p>
-          </div>
+  <div class="row">
+    <div class="col s12">
+      <div class="row">
+        <div class="col s12">
+          <p>Fecha computada1 = {{ randomNumberComputed }}</p>
+          <p>Fecha computada2 = {{ randomNumberComputed }}</p>
+          <p>Fecha metodo1 = {{ randomNumber() }}</p>
+          <p>Fecha metodo2 = {{ randomNumber() }}</p>
+          <p>Edad: {{ edadComputed }}</p>
         </div>
-        <div class="row">
-          <div class="col">
-            <a class="waves-effect waves-light btn" @click="getDate">Get date</a>
-          </div>
-          <div class="col">
-            <a class="waves-effect waves-light btn" @click="changeComputedDate"
-              >Change computed date</a
-            >
-          </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <a class="waves-effect waves-light btn" @click="getDate">Get date</a>
         </div>
-        <div class="row">
-          <div class="col">
-            <a class="waves-effect waves-light btn" @click="getEdad">Get edad</a>
-          </div>
-          <div class="col">
-            <a class="waves-effect waves-light btn" @click="changeFechaNacimiento"
-              >Change fecha nacimiento</a
-            >
-          </div>
+        <div class="col">
+          <a class="waves-effect waves-light btn" @click="changeComputedDate"
+            >Change computed date</a
+          >
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <a class="waves-effect waves-light btn" @click="getEdad">Get edad</a>
+        </div>
+        <div class="col">
+          <a class="waves-effect waves-light btn" @click="changeFechaNacimiento"
+            >Change fecha nacimiento</a
+          >
         </div>
       </div>
     </div>

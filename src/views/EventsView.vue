@@ -1,7 +1,8 @@
 <template>
   <div class="row">
     <div class="col s12">
-      <p>Count: {{ count }}</p>
+      <!-- <p>Count: {{ count }}</p> -->
+      <TestComponent />
       <p>
         <a class="waves-effect waves-light btn" @click="fnCount">Count</a>
       </p>
@@ -26,16 +27,16 @@
 </template>
 
 <script>
+import TestComponent from '../components/test.vue'
 export default {
   data() {
     return {
-      count: 0,
       username: ''
     }
   },
   methods: {
     fnCount() {
-      this.count++
+      this.$store.commit('increment')
     },
     fnLog() {
       console.log('Evento dentro de div')
@@ -50,6 +51,9 @@ export default {
       console.log('Value: ' + value)
       console.log('Event: ', event)
     }
+  },
+  components: {
+    TestComponent
   }
 }
 </script>

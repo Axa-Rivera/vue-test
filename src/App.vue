@@ -32,6 +32,12 @@
               <RouterLink :to="{ name: 'formsView' }">Forms</RouterLink>
             </li>
             <li>
+              <RouterLink :to="{ name: 'watchersView' }">Watchers</RouterLink>
+            </li>
+            <li>
+              <RouterLink :to="{ name: 'filtersView' }">Filters</RouterLink>
+            </li>
+            <li>
               <RouterLink :to="{ name: 'computedPropertiesView' }">Computed Properties</RouterLink>
             </li>
           </ul>
@@ -39,8 +45,9 @@
       </nav>
     </div>
   </header>
-
-  <RouterView />
+  <div class="container">
+    <RouterView />
+  </div>
 </template>
 
 <script setup>
