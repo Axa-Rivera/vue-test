@@ -10,6 +10,7 @@ import CSSView from '../views/CSSView.vue'
 import FormsView from '../views/FormsView.vue'
 import WatchersView from '../views/WatchersView.vue'
 import FiltersView from '../views/FiltersView.vue'
+import VuexView from '../views/vuexView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -68,6 +69,11 @@ const router = createRouter({
       path: '/filters',
       name: 'filtersView',
       component: FiltersView
+    },
+    {
+      path: '/vuex',
+      name: 'vuexView',
+      component: VuexView
     },
     {
       path: '/:pathMatch(.*)*',

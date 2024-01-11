@@ -1,14 +1,16 @@
 <template>
   <div class="row">
-    <div class="col s12">
-      <!-- <p>Count: {{ count }}</p> -->
-      <TestComponent />
-      <p>
-        <a class="waves-effect waves-light btn" @click="fnCount">Count</a>
-      </p>
+    <div class="row">
+      <a class="waves-effect waves-light btn" @click="fnCount">Count</a>
+      Count: {{ count }}
+    </div>
+    <div class="row">
       <a class="waves-effect waves-light btn" @click.once="fnLog">Click me </a>
-
-      <label @copy="fnCopy">Ingrese su nombre: </label>
+    </div>
+    <div class="row">
+      <label @copy="fnCopy">Texto con funcion al copiarse</label>
+    </div>
+    <div class="row">
       <div class="input-field col s6">
         <input
           id="username"
@@ -19,6 +21,8 @@
         />
         <label for="username">User Name:</label>
       </div>
+    </div>
+    <div class="row">
       <a class="waves-effect waves-light btn" @dblclick="fnDbClick($event, 'Hi')"
         >Button with parameters</a
       >
@@ -27,16 +31,16 @@
 </template>
 
 <script>
-import TestComponent from '../components/test.vue'
 export default {
   data() {
     return {
+      count: 0,
       username: ''
     }
   },
   methods: {
     fnCount() {
-      this.$store.commit('increment')
+      this.count++
     },
     fnLog() {
       console.log('Evento dentro de div')
@@ -51,9 +55,6 @@ export default {
       console.log('Value: ' + value)
       console.log('Event: ', event)
     }
-  },
-  components: {
-    TestComponent
   }
 }
 </script>

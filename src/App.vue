@@ -40,6 +40,9 @@
             <li>
               <RouterLink :to="{ name: 'computedPropertiesView' }">Computed Properties</RouterLink>
             </li>
+            <li>
+              <RouterLink :to="{ name: 'vuexView' }">Vuex</RouterLink>
+            </li>
           </ul>
         </div>
       </nav>

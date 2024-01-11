@@ -1,14 +1,14 @@
-import Vuex from 'vuex'
+import { createStore } from 'vuex'
+import shoppingCart from './shopping-cart'
+import cursos from './cursos'
 
-const store = new Vuex.Store({
-  state: {
-    count: 0
+const store = createStore({
+  modules: {
+    shoppingCart,
+    cursos
   },
-  mutations: {
-    increment(state) {
-      state.count++
-    }
-  }
+  // eslint-disable-next-line no-undef
+  strict: process.env.NODE_ENV !== 'production'
 })
 
 export default store

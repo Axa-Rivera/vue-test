@@ -1,15 +1,14 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
   <div class="row">
-    <p>Cuenta: {{ count }}</p>
+    <p>Total: ${{ getMontoTotal }}</p>
   </div>
 </template>
 <script>
+import { mapGetters } from 'vuex'
 export default {
   computed: {
-    count() {
-      return this.$store.state.count
-    }
+    ...mapGetters(['getMontoTotal'])
   }
 }
 </script>
